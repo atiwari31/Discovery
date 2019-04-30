@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Apr 30 11:26:43 IST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-016a-6cd1-1832-000004132a20 
+on database directory C:\PlanetTransportApplication\PlanetTransportApplication with class loader sun.misc.Launcher$AppClassLoader@232204a1 
+Loaded from file:/C:/Users/User/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_161-b12
+user.dir=C:\PlanetTransportApplication
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

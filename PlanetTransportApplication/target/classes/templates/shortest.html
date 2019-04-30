@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Planet Transport Application</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container" style="background-color:lightgrey">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div>
+        <h3>Find the shortest path from the Earth to a destination</h3>
+        <form class="form-horizontal" th:action="@{/shortest}" th:object="${shortest}" method="post">
+            <table style="width:100%">
+                <input type="hidden" th:field="*{vertexId}" />
+           <tr>
+             <td style="width:5%"><b>Source:</b>
+             </td><td style="width:30%">
+             <input type="text" th:field="*{vertexName}" class="form-control"/></td>
+             <td style="width:5%"><label for="paths">Destination:</label></td>
+             <td style="width:30%"><select id="paths" th:field="*{selectedVertex}" class="form-control input-lg">
+                <option th:each="v : ${pathList}"
+                        th:value="${v.vertexId}"
+                        th:text="${v.name}+' ('+${v.vertexId}+')'">
+                </option>
+            </select></td></tr>
+            <tr>
+            <td style="width:20%"><div class="checkbox">
+                <label>
+                    <input type="checkbox" th:field="*{trafficAllowed}"/>Overlay Traffic
+                </label>
+            </div></td>
+            <td style="width:20%"><div class="checkbox">
+                <label>
+                    <input type="checkbox" th:field="*{undirectedGraph}"/>Undirected Routes
+                </label>
+            </div></td>
+           
+            <td style="width:30%"><div class="form-horizontal">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div></td></tr>
+           </table> 
+                 
+                  
+           		  
+           		  
+            	  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
